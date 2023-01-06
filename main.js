@@ -22,6 +22,14 @@ function modelLoaded() {
 
 function draw() {
     image(video, 0, 0, 600, 500);
+    fill('#52E67A');
+    stroke('#FFFFFF')
+    circle(leftX, leftY, 20);
+    NumeroleftY = Number(leftY)
+    remover_decimales = floor(NumeroleftY);
+    volumen = remover_decimales/500;
+    document.getElementById("volumen").innerHTML = "Volumen = "+volumen;
+    cancion.setVolume(volumen)
 }
 
 function play() {
